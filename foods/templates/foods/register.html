@@ -1,0 +1,43 @@
+<head>
+
+    <title>Sign Up</title>
+
+</head>
+
+{% extends "foods/base.html" %}
+
+{% block header %}
+
+    <div class='jumbotron'>
+
+        <h2>Register An Account</h2>
+
+    </div>
+
+{% endblock header %}
+
+{% block content %}
+
+<br><br>
+
+    <form method="post" action="{% url 'foods:register' %}" class="form">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+ 
+            <button class="btn btn-primary">Register</button>
+
+        <input type="hidden" name="next" value="{% url 'foods:home' %}"/>
+
+    </form>
+
+<br>
+
+    <p style="text-align: center;">Already Have An Account, <a class="btn btn-primary" href="{% url 'login'%}">Log In Here</a>
+
+<br><br><br><br><br><br>
+
+    <div style="text-align: center;"><a href="http://github.com/PeterOlayemi">Developer: Peter Olayemi</a></div>
+ 
+{% endblock content %}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Esther's Foods and Supplement Corporations</title>
+
+<style type="text/css">
+
+    a:link{color: crimson;}
+    a:visited{color: crimson;}
+    a:hover{color:crimson;}
+    a:active{color: crimson;}
+
+    body{font-size: 20.4px;}
+
+</style>
+
+<script type="text/javascript">
+
+        function abouter(){
+            alert("This page will show information about Esther's Foods and Supplement Corporations")
+        }
+
+        function homer(){
+            alert("This page will show Home")
+        }
+
+        function contacter(){
+            alert("This page will show Contact Information")
+        }
+
+        function handler(){
+            alert("This website was developed by Peter Olayemi")
+        }
+
+        function deleter(){
+            alert("This comment will be removed permanently")
+        }
+
+    </script>
+
+    <noscript>
+        Oops...<br /> Sorry, your browser does not support scripts.<br />Kindly view this page with an upgraded browser.<br /><br />Sorry for the inconveniences.
+    </noscript>
+
+</head>
+
+<body>
+
+<!-- Static navbar -->
+
+<nav class="navbar navbar-default">
+
+    <div class="container">
+
+        <div class="navbar-header">
+
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"></button>
+            <div style="text-align: center;"><a class="navbar-brand" href="{% url 'foods:aboutus' %}" onclick="abouter()"><h1>ESTHER'S FOODS AND SUPPLEMENT CORPORATIONS</h1>
+            <h3><i>...providing information about food and others healthcare products...</i></h3></a></div>
+
+        </div>
+
+            <hr><br><br><br><br><br><br>
+
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav">
+
+                <li><a href="{% url 'foods:home' %}" onclick="homer()">HOME</a>
+                <li><a href="{% url 'foods:contactus' %}" onclick="contacter()">CONTACT US</a>
+                <li><a href="{% url 'foods:aboutus' %}" onclick="abouter()">ABOUT US</a>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                {% if user.is_authenticated %}
+
+                    <li><a>Welcome, {{ user.username|title }}</a>
+                    <li><a href="{% url 'logout' %}">Log Out</a>
+
+                {% else %}
+
+                    <li><a href="{% url 'foods:register' %}">Sign Up</a>
+                    <li><a href="{% url 'login'%}">Log In</a>
+                    
+                {% endif %}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!--/.nav-collapse -->
+
+    <div class="container">
+
+        <div class="page-header">
+
+            {% block header %}{% endblock header %}
+
+        </div>
+
+        <div>
+
+            {% block content %}{% endblock content %}
+
+        </div>
+
+    </div>
+
+<!-- /container -->
+
+</body>
+</html>

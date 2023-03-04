@@ -1,0 +1,92 @@
+<head>
+
+    <title>Home</title>
+
+    <style>
+
+        .subheading{
+            text-align: center;
+            font: 30px bold;
+        }
+
+        .first::first-letter{font-size: 5em;}
+
+    </style>
+
+</head>
+<body>
+
+    {% extends "foods/base.html" %}
+
+    {% block header %}
+
+        <div class='jumbotron' style="text-align:center">
+
+            <a name="top"></a><h2>Classes Of Food and Nutritional Value</h2>
+
+        </div>
+
+    {% endblock header %}
+
+    {% block content %}
+
+    <br><br>
+
+    <div>
+
+        <div class="subheading"><b>The Six Classes of Food</b></div><p class="first">Instead of grouping all foods into one single category, like fruits, vegetables or grains, the six classes of food break them down into their major constituent parts. The six categories represent the six classes of nutrients as defined by <a href="{% url 'foods:aboutus' %}" onclick="abouter()">Esther's Foods and Supplement Corporations(EFSC),</a> including all of the macronutrients and micronutrients that make up a complete and balanced diet. EFSC describes nutrients as those elements of your diet which are "essential for growth, reproduction and good health."<br />In other words, nutrients are things that humans need to consume in order to survive and to thrive. The six classes include: fat, carbohydrates, protein, vitamins, minerals and water. Yes, even water! These are elements of a diet that you cannot live without ingesting.<br />As you can see, both fat and carbohydrates are on this list. Any diet that sells itself as "zero fat" is misleading, dangerous or both because your body requires the regular intake of fat and carbohydrates for survival along with other macronutrients. While many diets aimed at weight loss recommend strictly limiting either fat or carbohydrates, frequently compensating with extra protein, a healthy balanced diet includes all three macronutrients in moderation, plus a wide enough variety of foods to access all your required vitamins and minerals.</p><br /><hr /><br /><br />
+
+        <div class="subheading"><b>Don't Fight The Fat</b></div><p class="first">According to <a href="{% url 'foods:aboutus' %}" onclick="abouter()">Esther's Foods and supplement corporations,</a> people in every age group tend to get insufficient amounts of oils in their diet, with an overabundance of solid fats.<br />Many oils, like olive and avocado, are rich in the heart-healthy omega-3 fatty acids. Liquid oils are classified as unsaturated fats. Fats like butter, lard or coconut oil — anything solid at room temperature — are saturated fats. It is important to choose healthy fats to fulfill this macronutrient requirement.<br />In the past, it was widely accepted that saturated fats were "unhealthy," but recently that theory has been challenged, according to the Harvard T.H. Chan School of Public Health. Panelists at the Harvard teach-in, "Saturated or not: Does type of fat matter?" addressed the issue.<br />Their advice is to replace rather than limit saturated fats: "Cutting back on saturated fat can be good for health if people replace saturated fat with good fats, especially, polyunsaturated fats. If you remove saturated fat and replace it with refined carbohydrates, there will be a detrimental effect."<br />The worst type of fat for your health are trans fats, found most predominantly in hydrogenated vegetable oils. According to the Harvard T.H. Chan School, trans fats contribute to inflammation, poor cholesterol, insulin resistance and heart disease.<br />Because of their lasting shelf life, trans fats are popular in the restaurant, fast food and packaged food product industries. For this reason, eating fresh whole foods and homemade meals can make a big difference in your healthy fat intake.</p><br /><hr /><br /><br />
+
+        <div class="subheading"><b>Carbohydrates Are Not the Enemy</b></div><p class="first">Like fats, there are a number of different kinds of carbohydrates, some that offer greater benefits than others, and some which come with risk factors if eaten in excess. Carbohydrates are found in virtually every plant-based food and some animal products as well, particularly milk. The three types of carbohydrates, according to <a href="{% url 'foods:aboutus' %}" onclick="abouter()">EFSC,</a> are sugars, fibers and starches.<br />Refined carbohydrates that contain a great deal of sugar with little fiber may contribute to health problems like diabetes and heart disease. On the other hand, whole fruits, vegetables and grains contain fiber alongside their sugars and starches, plus these whole plant foods are a much better source of nutrients like vitamins and minerals.<br />Dietary fiber, according to <a href="{% url 'foods:aboutus' %}" onclick="abouter()">EFSC,</a> helps to make food more satiating, keeping you full longer. An April 2019 study in the Journal of <a href="{% url 'foods:aboutus' %}" onclick="abouter()">EFSC </a>reports that dietary fiber may have positive health benefits protecting against a number of conditions, including diabetes and heart disease.<br />In the Dietary Guidelines for Americans, the data shows that the average person in the U.S., in any age group, is significantly exceeding the recommended daily intake of no more than 10 percent of total calories derived from added sugars.<br />These are sugars in addition to those found in whole fruits, grains and other foods. Added sugars might be found in juice or soda, in baked goods, cereals and other prepared grains, in candies and other sweets where you might expect them, and in dips, dressings or other condiments where you might not.</p><br /><hr /><br /><br />
+
+        <div class="subheading"><b>Don’t Pack in the Protein</b></div><p class="first">The <a href="{% url 'foods:aboutus' %}" onclick="abouter()">EFSC</a> recommends that anyone over the age of nine eat between 7 and 9 ounces (200 to 250 grams) of protein foods each day from a variety of sources, measuring the whole weight of the food, not just the grams of protein it includes. In grams of protein, the Harvard T.H. Chan School recommends calculating your daily intake need at around 7 grams of protein per 20 pounds of body weight.<br />According to<a href="{% url 'foods:aboutus' %}" onclick="abouter()"> EFSC,</a> adult men tend to eat a significantly higher amount of protein than is recommended, exceeding the recommended weekly intake by close to 50 percent, while women tend to eat within the recommended range. Both women and men are eating less than the recommended amount of seafood.<br />Proteins are complex molecular chains made up of a number of different kinds of building blocks called amino acids. The body is capable of producing some complex amino acids internally, but the very base building blocks, also called the nine essential amino acids, must be ingested.<br />There are an additional eight amino acids that may be considered essential in times of illness or high stress. In order to get all the essential amino acids your body requires, it's recommended to include a wide variety of protein sources in your diet, whether you get them from both animal and plant sources, or from plants alone.</p><br /><hr /><br /><br />
+
+        <div class="subheading"><b>Water, Vitamins and Minerals</b></div><p class="first">You may not immediately think of water as a nutrient, but what one element is more necessary to our daily lives? According to <a href="{% url 'foods:aboutus' %}" onclick="abouter()">EFSC,</a> "the Dietary Reference Intake for water is between 91 and 125 fluid ounces (2.7 to 3.7 liters) of water per day for adults. However, individual needs will depend on your weight, age and activity level, as well as any medical conditions you may have."<br />This number represents the total amount of fluid intake recommended in a day, including the water in any fruit or vegetables you might eat, liquids in the form of tea, juice, soup, milk or any other fluid intake.<br />According to Harvard Health, there are a total of 14 vitamins (including trace elements iodine and fluoride) and 16 minerals that are essential to human health. Some, like vitamin A, are over-represented in the average American diet, thanks to fortified foods and supplements. Others, like iron and calcium, are frequently low.<br /><br /><br />The best way to ensure you are meeting all your dietary nutrient needs is to eat a wide variety of foods, including fruits and vegetables, legumes, whole grains and animal products including fish and dairy. Vegetarians should consult a doctor or nutritionist to determine what nutrient needs they may be lacking.</p><br /><hr /></div>
+
+        <h2><b>Comments</b></h2><br>
+
+            <i><a class="btn btn-primary" href="{% url 'foods:addcomment' %}">Add Comment</a></i><hr>
+
+        <ul>
+
+            {% for comment in comments %}
+
+                <h3><b><u>{{ comment.owner|title }}</u></b></h3>
+
+                <li>
+                    {{ comment.text|linebreaks }}
+                    <i>{{ comment.date_added|date:'M d, Y H:i'}} 
+                </li>
+
+                <br><hr><br>
+
+            {% empty %}
+
+                <li>
+                    There are no comments for this post yet. You can also add comment.<br><br>
+                </li>
+
+            {% endfor %}
+
+        </ul>
+
+            {% if user.is_authenticated %}
+
+                <a class="btn btn-primary" href="{% url 'foods:viewyourcomment' %}">  View Your Comments </a> 
+
+            {% else %}
+
+            {% endif %}
+
+<br><br><br><br><br><br>
+
+        <a href="#top" class="btn btn-primary">Go To Top</a>
+
+<br><br><br>
+
+    <div style="text-align: center;" onclick="handler()"><a href="http://github.com/PeterOlayemi">Developer: Peter Olayemi</a></div>
+
+    {% endblock content %}
+
+</body>

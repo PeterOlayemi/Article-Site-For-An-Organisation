@@ -1,0 +1,49 @@
+<head>
+
+    <title>View Your Comments</title>
+
+</head>
+<body>
+
+    {% extends "foods/base.html" %}
+
+    {% block header %}
+
+        <div class='jumbotron' style="text-align:center">
+
+            <a name="top"></a><h2>View Your Comments</h2>
+
+        </div>
+
+    {% endblock header %}
+
+    {% block content %}
+
+        {% for comment in comments %}
+
+            <h3><b><u>{{ comment.owner|title }}</u></b></h3>
+
+            <li>
+                {{ comment.text|linebreaks }}
+                <i>{{ comment.date_added|date:'M d, Y H:i'}} <a class="btn btn-primary" href="{% url 'foods:editcomment' comment.id %}">  Edit Comment </a>  <a class="btn btn-primary" href="{% url 'foods:deletecomment' comment.id %}">  Delete Comment </a>
+            </li>
+
+                <br><hr><br>
+
+        {% empty %}
+
+                <li>
+                    You haven't commented on this post yet. Kindly add comment before viewing again<br><br>
+                </li>
+
+        {% endfor %}
+
+        <a href="{% url 'foods:home' %}" class="btn btn-primary" onclick="homer()">Go To Home</a>
+
+<br><br><br>
+
+    <div style="text-align: center;" onclick="handler()"><a href="http://github.com/PeterOlayemi">Developer: Peter Olayemi</a></div>
+
+    {% endblock content %}
+
+</body>

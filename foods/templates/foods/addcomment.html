@@ -1,0 +1,34 @@
+<head>
+    <title>Add Comment</title>
+</head>
+{% extends "foods/base.html" %}
+
+{% block header %}
+
+    <div class='jumbotron'>
+
+        <h2>Add Comment</h2>
+
+    </div>
+
+{% endblock header %}
+
+{% block content %}
+
+<br><br>
+
+    <form action="{% url 'foods:addcomment' %}" method='post' class="form">
+
+        {% csrf_token %}
+
+        {{form.as_p}}
+
+        <button class="btn btn-primary">Add Comment</button> <a class="btn btn-primary" href="{% url 'foods:home' %}" onclick="homer()">Back</a>
+
+    </form>
+
+<br><br><br><br><br><br>
+
+    <div style="text-align: center;"><a href="http://github.com/PeterOlayemi">Developer: Peter Olayemi</a></div>
+ 
+{% endblock content %}
